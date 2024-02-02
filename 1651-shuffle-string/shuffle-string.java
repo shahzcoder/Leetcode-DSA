@@ -4,6 +4,7 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
             shuffledString[indices[i]] = s.charAt(i);
         }
+        System.gc();
         return new String(shuffledString);
          
     }
