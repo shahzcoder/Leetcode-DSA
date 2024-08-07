@@ -1,13 +1,12 @@
 class Solution:
     def reverseParentheses(self, s: str) -> str:
-        stk = [""]    
-        for c in s:
-            if c == '(':
-                stk.append("")
-            elif c == ')':
-                top = stk.pop()[::-1]
-                stk[-1] += top
+        stack=[""]
+        for char in s:
+            if char not in "()":
+                stack[-1]+=char
+            elif char=="(":
+                stack.append("")
             else:
-                stk[-1] += c
-
-        return stk[0]
+                rev=stack.pop()[::-1]
+                stack[-1]+=rev
+        return "".join(stack)
