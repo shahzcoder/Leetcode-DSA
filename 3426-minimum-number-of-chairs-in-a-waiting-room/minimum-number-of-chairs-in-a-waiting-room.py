@@ -1,11 +1,14 @@
 class Solution:
     def minimumChairs(self, s: str) -> int:
-        count = a_chairs = 0
-        for c in s:
-            if c == 'E':
-                a_chairs += 1
-            else:
-                a_chairs -= 1
-            count = max(count,a_chairs) 
+        chairs = 0
+        count = 0
 
-        return count
+        for i in range(len(s)):
+            if s[i] == 'E':
+                count += 1
+            else:
+                count -= 1
+            
+            if chairs < count:
+                chairs += 1
+        return chairs
