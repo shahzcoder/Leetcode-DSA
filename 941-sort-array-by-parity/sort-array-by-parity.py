@@ -1,6 +1,5 @@
 class Solution:
     def sortArrayByParity(self, nums: List[int]) -> List[int]:
-        nums.sort()
         l = 0
         r = len(nums) - 1
         while l < r:
