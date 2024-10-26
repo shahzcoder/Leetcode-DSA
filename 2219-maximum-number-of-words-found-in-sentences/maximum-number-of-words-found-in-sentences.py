@@ -10,7 +10,6 @@ class Solution:
         
         maxWords = 0
         for sentence in sentences:
-            print(f"Number of words in '{sentence}': {countWordsInSentence(sentence)}")
             maxWords = max(maxWords, countWordsInSentence(sentence))
 
         return maxWords
