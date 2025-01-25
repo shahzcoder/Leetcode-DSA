@@ -10,8 +10,3 @@ class Solution:
                 stack.append(c)
         
         return len(stack)
-            
-
-        
-        return open + close
-        
