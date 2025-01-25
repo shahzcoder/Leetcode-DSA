@@ -6,7 +6,7 @@ class Solution:
                 stack.append(c)
             elif c == ')' and stack and stack[-1] == '(':
                 stack.pop()
-            elif c == ')':
+            else:
                 stack.append(c)
         
         return len(stack)
