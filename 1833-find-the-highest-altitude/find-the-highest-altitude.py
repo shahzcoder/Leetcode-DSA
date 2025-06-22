@@ -4,7 +4,7 @@ class Solution:
         gain.insert(0,0)
         n = len(gain)
 
-        for i in range(2, n):
+        for i in range(1,n):
             gain[i] = gain[i - 1] + gain[i]
 
         return max(gain)
