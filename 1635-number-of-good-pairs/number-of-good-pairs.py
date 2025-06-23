@@ -12,5 +12,3 @@ class Solution:
                 count[num] = 1
         
         return pairs
-        
-                
