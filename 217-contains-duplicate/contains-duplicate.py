@@ -3,7 +3,6 @@ class Solution:
         count = {}
         for num in nums:
             if num in count:
-                count[num] += 1
                 return True
             else:
                 count[num] = 1
