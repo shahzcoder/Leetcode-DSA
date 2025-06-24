@@ -1,9 +1,12 @@
+from collections import defaultdict
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        hashmap = {}
+        count = defaultdict(int)
         for num in nums:
-            if num in hashmap:
+            if num in count:
+                count[num] += 1
                 return True
             else:
-                hashmap[num] = 1
+                count[num] = 1
+            
         return False
